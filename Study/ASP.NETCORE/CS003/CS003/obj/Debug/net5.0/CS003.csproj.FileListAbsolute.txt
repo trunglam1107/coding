@@ -1,0 +1,16 @@
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\bin\Debug\net5.0\CS003.exe
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\bin\Debug\net5.0\CS003.deps.json
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\bin\Debug\net5.0\CS003.runtimeconfig.json
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\bin\Debug\net5.0\CS003.runtimeconfig.dev.json
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\bin\Debug\net5.0\CS003.dll
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\bin\Debug\net5.0\ref\CS003.dll
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\bin\Debug\net5.0\CS003.pdb
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\obj\Debug\net5.0\CS003.csproj.AssemblyReference.cache
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\obj\Debug\net5.0\CS003.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\obj\Debug\net5.0\CS003.AssemblyInfoInputs.cache
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\obj\Debug\net5.0\CS003.AssemblyInfo.cs
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\obj\Debug\net5.0\CS003.csproj.CoreCompileInputs.cache
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\obj\Debug\net5.0\CS003.dll
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\obj\Debug\net5.0\ref\CS003.dll
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\obj\Debug\net5.0\CS003.pdb
+D:\Coding\Study\ASP.NETCORE\CS003\CS003\obj\Debug\net5.0\CS003.genruntimeconfig.cache

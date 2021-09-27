@@ -1,0 +1,52 @@
+Front end giao diện người dùng 
+Back end xử lý 
+Cấu trúc cơ bản của 1 website : 
+HTML => xương sống 
+
+
+1 dư án (n người làm > 1 ) quản lý mã nguồn , quản lý tài liệu (tài liệu yêu cầu , tài liệu thiết kế , tài liệu test ) 1 dự án 
+1 con server cài git cấp tk 
+
+Github
+1 server cloud 
+1 máy tính cá nhân là 1 con server lưu dữ liệu trong ổ cứng máy tính 
+
+Khi nào sử dụng ? 
+-Muốn lưu lên khi update hoặc thay đổi máy tính cá nhân => dữ liệu k bị mất 
+-Muốn tạo 1 cái dự án để mn cùng làm 
+
+Team 10 người : share tài liệu , viết kỹ thuật 
+Xài github 
+
+http://localhost:41173/api/employee/GetAllDepartmentNames
+
+localhost:41173/ domain là gì 
+
+Dự án --- dự án là gì ? dự án quản lý sinh viên 
+=> thông tin sinh viên (họ tên , ngày tháng năm sinh , stt , địa chỉ , ......) 
+=> học lớp nào (tên lớp mã lớp , gvcn )
+=> thông viên giáo viên ( // , quản lý lớp nào )  
+
+QuanLySinhVien ( mục đích làm gì )
+
+Mua 1 máy tính => làm gì => cần cài phần mềm gì => coi phim => cài web (web nào : gg chrome , microsoft egde ,  cốc cốc , firefox ) 
+
+API là gì ? 
+
+Nhà hàng trên sông (nằm giữa sông ) -- bờ ( KH muốn ra nhà hàng này ) --> thuyền là cầu nối giữa bờ và nhà hàng 
+
+Ứng dụng thêm cv hàng ngày (frontend có xử lý ) -- dữ liệu mỗi ngày => lưu lên server => mobile chỉ lưu được offline (lưu vô bộ nhớ máy sqlite ) 
+=> lưu lên server nó thông qua 1 cái api 
+Thiết bị và 1 cái server lưu dữ liệu 
+
+API publish lên server => testingvn.com.vn trỏ vô cái bản build api 
+
+File chi tiết api : Domain chính  : iphone13promax.com.vn
+1.Employee 
+-GetlistAllemployee : /api/employee/ : hiển thị danh sách nhân viên (th test)  
+=> Đầu ra : hiển thị danh sách phòng ban (failed) 
+
+
+
+
+=>Đưa file tester 

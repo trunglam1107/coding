@@ -1,0 +1,16 @@
+D:\Coding\Study\c#\HeartConsole\HeartConsole\bin\Debug\net5.0\HeartConsole.exe
+D:\Coding\Study\c#\HeartConsole\HeartConsole\bin\Debug\net5.0\HeartConsole.deps.json
+D:\Coding\Study\c#\HeartConsole\HeartConsole\bin\Debug\net5.0\HeartConsole.runtimeconfig.json
+D:\Coding\Study\c#\HeartConsole\HeartConsole\bin\Debug\net5.0\HeartConsole.runtimeconfig.dev.json
+D:\Coding\Study\c#\HeartConsole\HeartConsole\bin\Debug\net5.0\HeartConsole.dll
+D:\Coding\Study\c#\HeartConsole\HeartConsole\bin\Debug\net5.0\ref\HeartConsole.dll
+D:\Coding\Study\c#\HeartConsole\HeartConsole\bin\Debug\net5.0\HeartConsole.pdb
+D:\Coding\Study\c#\HeartConsole\HeartConsole\obj\Debug\net5.0\HeartConsole.csproj.AssemblyReference.cache
+D:\Coding\Study\c#\HeartConsole\HeartConsole\obj\Debug\net5.0\HeartConsole.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\Study\c#\HeartConsole\HeartConsole\obj\Debug\net5.0\HeartConsole.AssemblyInfoInputs.cache
+D:\Coding\Study\c#\HeartConsole\HeartConsole\obj\Debug\net5.0\HeartConsole.AssemblyInfo.cs
+D:\Coding\Study\c#\HeartConsole\HeartConsole\obj\Debug\net5.0\HeartConsole.csproj.CoreCompileInputs.cache
+D:\Coding\Study\c#\HeartConsole\HeartConsole\obj\Debug\net5.0\HeartConsole.dll
+D:\Coding\Study\c#\HeartConsole\HeartConsole\obj\Debug\net5.0\ref\HeartConsole.dll
+D:\Coding\Study\c#\HeartConsole\HeartConsole\obj\Debug\net5.0\HeartConsole.pdb
+D:\Coding\Study\c#\HeartConsole\HeartConsole\obj\Debug\net5.0\HeartConsole.genruntimeconfig.cache

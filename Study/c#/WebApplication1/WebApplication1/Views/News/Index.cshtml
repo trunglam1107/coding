@@ -1,0 +1,43 @@
+﻿
+@model List<WebApplication1.Controllers.Article>;
+
+@{
+    ViewData["Title"] = "News Homepage";
+    Layout = "_Layout";
+
+    //var articles = ViewBag.Article;
+
+    //var articles = ViewData["Articles"] as List<WebApplication1.Controllers.Article>;
+}
+<h1>
+    News Listing
+</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Author</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var article in Model)
+        {
+            <tr>
+                <td>@article.Id</td>
+                <td>@article.Title</td>
+                <td>@article.Content</td>
+                <td>@article.Author</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+@section Scripts{
+    <script>
+
+    </script>
+
+}
