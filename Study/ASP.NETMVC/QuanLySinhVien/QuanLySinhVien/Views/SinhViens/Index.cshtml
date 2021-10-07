@@ -1,0 +1,81 @@
+﻿@model IEnumerable<QuanLySinhVien.Models.SinhVien>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSinhVien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GioiTinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgaySinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoiSinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoiOHienTai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KhoaHoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LyLich)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lop.TenLop)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSinhVien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GioiTinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgaySinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoiSinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoiOHienTai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KhoaHoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LyLich)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HinhAnh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lop.TenLop)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SinhVien_ID.Trim(' ') }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SinhVien_ID.Trim(' ') }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SinhVien_ID.Trim(' ') })
+        </td>
+    </tr>
+}
+
+</table>

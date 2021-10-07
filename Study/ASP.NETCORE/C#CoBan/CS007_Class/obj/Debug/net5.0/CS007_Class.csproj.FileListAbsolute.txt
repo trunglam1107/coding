@@ -1,0 +1,16 @@
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\bin\Debug\net5.0\CS007_Class.exe
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\bin\Debug\net5.0\CS007_Class.deps.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\bin\Debug\net5.0\CS007_Class.runtimeconfig.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\bin\Debug\net5.0\CS007_Class.runtimeconfig.dev.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\bin\Debug\net5.0\CS007_Class.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\bin\Debug\net5.0\ref\CS007_Class.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\bin\Debug\net5.0\CS007_Class.pdb
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\obj\Debug\net5.0\CS007_Class.csproj.AssemblyReference.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\obj\Debug\net5.0\CS007_Class.GeneratedMSBuildEditorConfig.editorconfig
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\obj\Debug\net5.0\CS007_Class.AssemblyInfoInputs.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\obj\Debug\net5.0\CS007_Class.AssemblyInfo.cs
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\obj\Debug\net5.0\CS007_Class.csproj.CoreCompileInputs.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\obj\Debug\net5.0\CS007_Class.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\obj\Debug\net5.0\ref\CS007_Class.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\obj\Debug\net5.0\CS007_Class.pdb
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS007_Class\obj\Debug\net5.0\CS007_Class.genruntimeconfig.cache

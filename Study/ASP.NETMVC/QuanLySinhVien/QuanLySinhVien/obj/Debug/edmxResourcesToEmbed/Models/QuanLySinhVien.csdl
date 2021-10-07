@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLySinhVienModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="KetQua">
+    <Key>
+      <PropertyRef Name="ID_MonHoc" />
+      <PropertyRef Name="ID_SinhVien" />
+      <PropertyRef Name="LanThi" />
+    </Key>
+    <Property Name="ID_MonHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ID_SinhVien" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LanThi" Type="Int32" Nullable="false" />
+    <Property Name="DiemThi" Type="Double" Nullable="false" />
+    <Property Name="DiemTongKet" Type="Double" Nullable="false" />
+    <NavigationProperty Name="MonHoc" Relationship="Self.FK_KetQua_MonHoc" FromRole="KetQua" ToRole="MonHoc" />
+    <NavigationProperty Name="SinhVien" Relationship="Self.FK_KetQua_SinhVien" FromRole="KetQua" ToRole="SinhVien" />
+  </EntityType>
+  <EntityType Name="Khoa">
+    <Key>
+      <PropertyRef Name="Khoa_ID" />
+    </Key>
+    <Property Name="Khoa_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TenKhoa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Lop" Relationship="Self.FK_Lop_Khoa" FromRole="Khoa" ToRole="Lop" />
+  </EntityType>
+  <EntityType Name="Lop">
+    <Key>
+      <PropertyRef Name="Lop_ID" />
+    </Key>
+    <Property Name="Lop_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TenLop" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID_Khoa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Khoa" Relationship="Self.FK_Lop_Khoa" FromRole="Lop" ToRole="Khoa" />
+    <NavigationProperty Name="SinhVien" Relationship="Self.FK_SinhVien_Lop" FromRole="Lop" ToRole="SinhVien" />
+  </EntityType>
+  <EntityType Name="MonHoc">
+    <Key>
+      <PropertyRef Name="MonHoc_ID" />
+    </Key>
+    <Property Name="MonHoc_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TenMonHoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SoTrinh" Type="Int32" Nullable="false" />
+    <Property Name="GiangVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DaXoa" Type="Boolean" />
+    <NavigationProperty Name="KetQua" Relationship="Self.FK_KetQua_MonHoc" FromRole="MonHoc" ToRole="KetQua" />
+  </EntityType>
+  <EntityType Name="QuanLyNguoiDung">
+    <Key>
+      <PropertyRef Name="TenDangNhap" />
+      <PropertyRef Name="MatKhau" />
+    </Key>
+    <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="QuyenHan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SinhVien">
+    <Key>
+      <PropertyRef Name="SinhVien_ID" />
+    </Key>
+    <Property Name="SinhVien_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TenSinhVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GioiTinh" Type="Byte" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NoiSinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NoiOHienTai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KhoaHoc" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LyLich" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID_Lop" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KetQua" Relationship="Self.FK_KetQua_SinhVien" FromRole="SinhVien" ToRole="KetQua" />
+    <NavigationProperty Name="Lop" Relationship="Self.FK_SinhVien_Lop" FromRole="SinhVien" ToRole="Lop" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_KetQua_MonHoc">
+    <End Role="MonHoc" Type="Self.MonHoc" Multiplicity="1" />
+    <End Role="KetQua" Type="Self.KetQua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonHoc">
+        <PropertyRef Name="MonHoc_ID" />
+      </Principal>
+      <Dependent Role="KetQua">
+        <PropertyRef Name="ID_MonHoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KetQua_SinhVien">
+    <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
+    <End Role="KetQua" Type="Self.KetQua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinhVien">
+        <PropertyRef Name="SinhVien_ID" />
+      </Principal>
+      <Dependent Role="KetQua">
+        <PropertyRef Name="ID_SinhVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lop_Khoa">
+    <End Role="Khoa" Type="Self.Khoa" Multiplicity="1" />
+    <End Role="Lop" Type="Self.Lop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Khoa">
+        <PropertyRef Name="Khoa_ID" />
+      </Principal>
+      <Dependent Role="Lop">
+        <PropertyRef Name="ID_Khoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SinhVien_Lop">
+    <End Role="Lop" Type="Self.Lop" Multiplicity="1" />
+    <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lop">
+        <PropertyRef Name="Lop_ID" />
+      </Principal>
+      <Dependent Role="SinhVien">
+        <PropertyRef Name="ID_Lop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLySinhVienEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="KetQua" EntityType="Self.KetQua" />
+    <EntitySet Name="Khoa" EntityType="Self.Khoa" />
+    <EntitySet Name="Lop" EntityType="Self.Lop" />
+    <EntitySet Name="MonHoc" EntityType="Self.MonHoc" />
+    <EntitySet Name="QuanLyNguoiDung" EntityType="Self.QuanLyNguoiDung" />
+    <EntitySet Name="SinhVien" EntityType="Self.SinhVien" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_KetQua_MonHoc" Association="Self.FK_KetQua_MonHoc">
+      <End Role="MonHoc" EntitySet="MonHoc" />
+      <End Role="KetQua" EntitySet="KetQua" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KetQua_SinhVien" Association="Self.FK_KetQua_SinhVien">
+      <End Role="SinhVien" EntitySet="SinhVien" />
+      <End Role="KetQua" EntitySet="KetQua" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lop_Khoa" Association="Self.FK_Lop_Khoa">
+      <End Role="Khoa" EntitySet="Khoa" />
+      <End Role="Lop" EntitySet="Lop" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SinhVien_Lop" Association="Self.FK_SinhVien_Lop">
+      <End Role="Lop" EntitySet="Lop" />
+      <End Role="SinhVien" EntitySet="SinhVien" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

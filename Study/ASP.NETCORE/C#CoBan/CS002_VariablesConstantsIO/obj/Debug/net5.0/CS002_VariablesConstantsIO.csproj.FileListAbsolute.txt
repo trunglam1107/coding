@@ -1,0 +1,16 @@
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\bin\Debug\net5.0\CS002_VariablesConstantsIO.exe
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\bin\Debug\net5.0\CS002_VariablesConstantsIO.deps.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\bin\Debug\net5.0\CS002_VariablesConstantsIO.runtimeconfig.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\bin\Debug\net5.0\CS002_VariablesConstantsIO.runtimeconfig.dev.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\bin\Debug\net5.0\CS002_VariablesConstantsIO.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\bin\Debug\net5.0\ref\CS002_VariablesConstantsIO.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\bin\Debug\net5.0\CS002_VariablesConstantsIO.pdb
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\obj\Debug\net5.0\CS002_VariablesConstantsIO.csproj.AssemblyReference.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\obj\Debug\net5.0\CS002_VariablesConstantsIO.GeneratedMSBuildEditorConfig.editorconfig
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\obj\Debug\net5.0\CS002_VariablesConstantsIO.AssemblyInfoInputs.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\obj\Debug\net5.0\CS002_VariablesConstantsIO.AssemblyInfo.cs
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\obj\Debug\net5.0\CS002_VariablesConstantsIO.csproj.CoreCompileInputs.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\obj\Debug\net5.0\CS002_VariablesConstantsIO.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\obj\Debug\net5.0\ref\CS002_VariablesConstantsIO.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\obj\Debug\net5.0\CS002_VariablesConstantsIO.pdb
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS002_VariablesConstantsIO\obj\Debug\net5.0\CS002_VariablesConstantsIO.genruntimeconfig.cache

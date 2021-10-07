@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "DangNhap";
+}
+@using (Html.BeginForm("ThongTinTaiKhoan", "ThongTinTaiKhoan",new { @HoTen = "Nguyen Van A"}))
+{
+    <center>
+        <table>
+            <tr>
+                <td colspan="2"><h2 align="center">ĐĂNG NHẬP</h2></td>
+            </tr>
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td>@Html.TextBox("txtTenDangNhap")</td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td>@Html.Password("txtMatKhau")</td>
+            </tr>
+            <tr>
+                <td align="right"><input type="submit" value="Đăng nhập" /></td>
+            </tr>
+        </table>
+    </center>
+}

@@ -1,0 +1,16 @@
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\bin\Debug\net5.0\CS005_for_while.exe
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\bin\Debug\net5.0\CS005_for_while.deps.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\bin\Debug\net5.0\CS005_for_while.runtimeconfig.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\bin\Debug\net5.0\CS005_for_while.runtimeconfig.dev.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\bin\Debug\net5.0\CS005_for_while.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\bin\Debug\net5.0\ref\CS005_for_while.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\bin\Debug\net5.0\CS005_for_while.pdb
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\obj\Debug\net5.0\CS005_for_while.csproj.AssemblyReference.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\obj\Debug\net5.0\CS005_for_while.GeneratedMSBuildEditorConfig.editorconfig
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\obj\Debug\net5.0\CS005_for_while.AssemblyInfoInputs.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\obj\Debug\net5.0\CS005_for_while.AssemblyInfo.cs
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\obj\Debug\net5.0\CS005_for_while.csproj.CoreCompileInputs.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\obj\Debug\net5.0\CS005_for_while.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\obj\Debug\net5.0\ref\CS005_for_while.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\obj\Debug\net5.0\CS005_for_while.pdb
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS005_for_while\obj\Debug\net5.0\CS005_for_while.genruntimeconfig.cache

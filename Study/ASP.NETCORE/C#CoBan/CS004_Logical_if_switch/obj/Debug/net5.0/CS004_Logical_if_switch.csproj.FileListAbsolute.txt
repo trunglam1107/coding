@@ -1,0 +1,16 @@
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\bin\Debug\net5.0\CS004_Logical_if_switch.exe
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\bin\Debug\net5.0\CS004_Logical_if_switch.deps.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\bin\Debug\net5.0\CS004_Logical_if_switch.runtimeconfig.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\bin\Debug\net5.0\CS004_Logical_if_switch.runtimeconfig.dev.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\bin\Debug\net5.0\CS004_Logical_if_switch.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\bin\Debug\net5.0\ref\CS004_Logical_if_switch.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\bin\Debug\net5.0\CS004_Logical_if_switch.pdb
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\obj\Debug\net5.0\CS004_Logical_if_switch.csproj.AssemblyReference.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\obj\Debug\net5.0\CS004_Logical_if_switch.GeneratedMSBuildEditorConfig.editorconfig
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\obj\Debug\net5.0\CS004_Logical_if_switch.AssemblyInfoInputs.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\obj\Debug\net5.0\CS004_Logical_if_switch.AssemblyInfo.cs
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\obj\Debug\net5.0\CS004_Logical_if_switch.csproj.CoreCompileInputs.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\obj\Debug\net5.0\CS004_Logical_if_switch.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\obj\Debug\net5.0\ref\CS004_Logical_if_switch.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\obj\Debug\net5.0\CS004_Logical_if_switch.pdb
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS004_Logical_if_switch\obj\Debug\net5.0\CS004_Logical_if_switch.genruntimeconfig.cache

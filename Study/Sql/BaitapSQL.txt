@@ -1,0 +1,120 @@
+Run SQL commands:
+1. Đếm tất cả sinh viên trong danh sách sinh viên của lớp D2_CNTT khoa CNTT
+**Đáp án**
+Cách 1 : 
+SELECT COUNT(*) AS SoHocSinh FROM SinhVien AS sv
+OUTER APPLY (SELECT * FROM Lop AS l WHERE sv.ID_Lop = l.Lop_ID) AS tblLop
+OUTER APPLY (SELECT * FROM Khoa AS k WHERE tblLop.ID_Khoa = k.Khoa_ID) AS tblKhoa 
+WHERE tblLop.TenLop = 'D2_CNTT' AND tblKhoa.TenKhoa = 'Cong Nghe Thong Tin'
+Cách 2 : 
+SELECT COUNT(*) AS SoHocSinh FROM SinhVien AS sv
+INNER JOIN Lop AS l
+          ON l.Lop_ID = sv.ID_Lop 
+         INNER JOIN Khoa AS k
+                   ON k.Khoa_ID = l.ID_Khoa
+WHERE l.TenLop='D2_CNTT' AND k.Khoa_ID='k1'
+2. Thêm 5 sinh viên trong database : 
+Nguyễn Thị Thanh Hoa, 
+Trần Quốc Tuấn, 
+Nguyễn Tuấn Tú, 
+Cao Thanh Thủy, 
+Trần Văn Đại vao lớp D2_CNTT khoa Công Nghệ Thông Tin
+
+**Đáp án**
+INSERT INTO SinhVien(SinhVien_ID,TenSinhVien, GioiTinh, NgaySinh, NoiSinh, NoiOHienTai,
+            KhoaHoc, LyLich, ID_Lop, HinhAnh) VALUES ('052', N'Nguyễn Thị Thanh Hoa',0,'1989-11-10','Ha Noi','Ha Noi','2009-2013','Tot','l1','betrai.jpg')
+            INSERT INTO SinhVien(SinhVien_ID,TenSinhVien, GioiTinh, NgaySinh, NoiSinh, NoiOHienTai,
+            KhoaHoc, LyLich, ID_Lop, HinhAnh) VALUES ('053',N'Trần Quốc Tuấn',0,'1989-11-11','Thanh Hoa','Ha Noi','2009-2013','Tot','l1','betrai.jpg')
+            INSERT INTO SinhVien(SinhVien_ID,TenSinhVien, GioiTinh, NgaySinh, NoiSinh, NoiOHienTai,
+            KhoaHoc, LyLich, ID_Lop, HinhAnh) VALUES ('054',N'Nguyễn Tuấn Tú',0,'1989-11-12','Vinh Long','Can Tho','2009-2013','Tot','l1','betrai.jpg')
+            INSERT INTO SinhVien(SinhVien_ID,TenSinhVien, GioiTinh, NgaySinh, NoiSinh, NoiOHienTai,
+            KhoaHoc, LyLich, ID_Lop, HinhAnh) VALUES ('055',N'Cao Thanh Thủy',0,'1989-11-14','Nghe An','Ha Noi','2009-2013','Tot','l1','betrai.jpg')
+            INSERT INTO SinhVien(SinhVien_ID,TenSinhVien, GioiTinh, NgaySinh, NoiSinh, NoiOHienTai,
+            KhoaHoc, LyLich, ID_Lop, HinhAnh) VALUES ('056',N'Trần Văn Đại',0,'1989-11-21','Bac Ninh','Ha Noi','2009-2013','Tot','l1','betrai.jpg')
+3. Update thông tin tên của sinh viên có mã 002 từ Trần Huy Bình sang Trần Văn Bình
+ **Đáp án**        
+UPDATE SinhVien
+    SET
+       TenSinhVien = N'Trần Văn Bình'
+    WHERE SinhVien_ID = '002'
+4. Dùng câu lệnh xóa 1 sinh viên bất kì trong database
+**Đáp án**
+ DELETE FROM SinhVien WHERE SinhVien_ID = '051'
+5. Tìm danh sách sinh viên của lớp “D2_CNTT” thuộc khoa Công Nghệ Thông Tin
+**Đáp án**
+SELECT * FROM SinhVien AS sv
+INNER JOIN Lop AS l
+          ON l.Lop_ID = sv.ID_Lop 
+INNER JOIN Khoa AS k
+                   ON k.Khoa_ID = l.ID_Khoa          
+WHERE l.Lop_ID = 'l1' AND l.ID_Khoa='k1'   
+
+6. Tìm danh sách sinh viên của lớp “D2_CNTT” thuộc khoa Công Nghệ Thông Tin có năm sinh > 1989
+**Đáp án**
+SELECT * FROM SinhVien AS sv
+INNER JOIN Lop AS l
+          ON l.Lop_ID = sv.ID_Lop 
+INNER JOIN Khoa AS k
+                   ON k.Khoa_ID = l.ID_Khoa          
+WHERE l.Lop_ID = 'l1' AND l.ID_Khoa='k1' AND YEAR(sv.NgaySinh) > 1989
+
+7. Delete "Le quang hoa" in Class
+**Đáp án**
+ DELETE FROM Lop WHERE TenLop='le quang hoa'
+8. Update 3 sinh viên có MSSV là ‘005’, ‘006’, ‘007’ thay đổi thông tin khoa: " Cong Nghe Thong Tin" sang "He Thong Dien"  - lớp L7 dùng câu lệnh SQL 
+**Đáp án**
+SELECT * FROM SinhVien WHERE SinhVien_ID IN ('005', '006', '007')
+ 
+SELECT * FROM Lop AS l WHERE l.Lop_ID='l1'
+ 
+SELECT * FROM Khoa WHERE Khoa_ID='k1'
+ 
+UPDATE Lop SET ID_Khoa = 'k2' WHERE Lop_ID='l1'
+ 
+SELECT * FROM SinhVien AS sv
+INNER JOIN Lop AS l ON l.Lop_ID = sv.ID_Lop 
+INNER JOIN Khoa AS k ON k.Khoa_ID = l.ID_Khoa
+WHERE sv.SinhVien_ID IN ('005', '006', '007')
+
+9. Tìm điểm của M2 cao nhất
+**Đáp án**
+ -SELECT MAX(DiemTongKet) AS DiemCaoNhat  FROM KetQua AS kq WHERE kq.ID_MonHoc='m2'
+
+ -SELECT MAX(DiemThi) AS DiemCaoNhat  FROM KetQua AS kq WHERE kq.ID_MonHoc='m2'
+10. Tìm  điểm của M1 cao nhì
+**Đáp án**
+-SELECT MAX(DiemTongKet) FROM KetQua AS kq WHERE kq.ID_MonHoc='m1' AND DiemTongKet < 
+   (SELECT MAX(DiemTongKet)  FROM KetQua AS kq WHERE kq.ID_MonHoc='m1')   
+
+-SELECT MAX(DiemThi) FROM KetQua AS kq 
+WHERE kq.ID_MonHoc='m1' AND DiemThi < (SELECT MAX(DiemThi)  FROM KetQua AS kq WHERE kq.ID_MonHoc='m1')
+
+11. Lấy ngày hiện tại của hệ thống
+**Đáp án**
+SELECT GETDATE()
+
+12. Sắp xếp điểm tổng kết giảm dần/ tăng dần
+**Đáp án**
+SELECT * FROM KetQua ORDER BY DiemTongKet DESC (giảm dần)
+SELECT * FROM KetQua ORDER BY DiemTongKet ASC (tăng dần)
+13. Đếm tổng số lượng sinh viên
+**Đáp án**
+SELECT COUNT(*) FROM SinhVien AS sv
+14. Đếm họ và tên sinh viên không trùng nhau
+**Đáp án**
+SELECT COUNT (DISTINCT TenSinhVien)  FROM SinhVien
+15. Tính số lớp của khoa CNTT
+**Đáp án**
+SELECT COUNT(*) AS SoLop FROM Lop AS l 
+INNER JOIN Khoa AS k
+ON k.Khoa_ID = l.ID_Khoa WHERE k.Khoa_ID='k1'
+16. Tính tổng điểm tổng kết của m1 của sinh viên có mã số 011
+**Đáp án**
+SELECT SUM(DiemTongKet) AS DiemTongKet  FROM KetQua AS kq WHERE kq.ID_SinhVien='011' AND kq.ID_MonHoc='m1'   
+17. Tìm sinh viên có điểm M2 cao nhất
+**Đáp án**
+SELECT sv.TenSinhVien,kq.DiemThi FROM KetQua AS kq 
+INNER JOIN MonHoc AS mh ON mh.MonHoc_ID = kq.ID_MonHoc
+INNER JOIN SinhVien AS sv ON sv.SinhVien_ID = kq.ID_SinhVien 
+WHERE kq.ID_MonHoc = 'm2'  AND  DiemThi >= ALL(SELECT DiemThi FROM KetQua WHERE ID_MonHoc = 'm2' )                  
+                               

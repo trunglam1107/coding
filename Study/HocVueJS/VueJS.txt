@@ -1,0 +1,17 @@
+-Vue js và react js khá tương đồng:
+
++Data=state
++Vuex=Redux
++Vue router = router
++Component = component
++props
++NPM : node package manager
+
+Cài đặt vue js
++nodejs + npm => npm -v
++Vue cli : 
+
+Cấu trúc thư mục : 
++src : source code 
+     +main.js : file gốc
+

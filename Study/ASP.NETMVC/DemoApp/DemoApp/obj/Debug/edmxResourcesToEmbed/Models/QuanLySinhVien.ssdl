@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MyDB.dbo.SinhVien' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SinhVien">
+    <Key>
+      <PropertyRef Name="MaHS" />
+    </Key>
+    <Property Name="MaHS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenHS" Type="nvarchar" MaxLength="200" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="200" />
+    <Property Name="SoDienThoai" Type="varchar" MaxLength="12" />
+  </EntityType>
+  <EntityContainer Name="MyDBModelStoreContainer">
+    <EntitySet Name="SinhVien" EntityType="Self.SinhVien" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SinhVien].[MaHS] AS [MaHS], 
+    [SinhVien].[TenHS] AS [TenHS], 
+    [SinhVien].[DiaChi] AS [DiaChi], 
+    [SinhVien].[SoDienThoai] AS [SoDienThoai]
+    FROM [dbo].[SinhVien] AS [SinhVien]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,16 @@
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\bin\Debug\net5.0\CS006_Method.exe
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\bin\Debug\net5.0\CS006_Method.deps.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\bin\Debug\net5.0\CS006_Method.runtimeconfig.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\bin\Debug\net5.0\CS006_Method.runtimeconfig.dev.json
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\bin\Debug\net5.0\CS006_Method.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\bin\Debug\net5.0\ref\CS006_Method.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\bin\Debug\net5.0\CS006_Method.pdb
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\obj\Debug\net5.0\CS006_Method.csproj.AssemblyReference.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\obj\Debug\net5.0\CS006_Method.GeneratedMSBuildEditorConfig.editorconfig
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\obj\Debug\net5.0\CS006_Method.AssemblyInfoInputs.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\obj\Debug\net5.0\CS006_Method.AssemblyInfo.cs
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\obj\Debug\net5.0\CS006_Method.csproj.CoreCompileInputs.cache
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\obj\Debug\net5.0\CS006_Method.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\obj\Debug\net5.0\ref\CS006_Method.dll
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\obj\Debug\net5.0\CS006_Method.pdb
+G:\coding\Study\ASP.NETCORE\C#CoBan\CS006_Method\obj\Debug\net5.0\CS006_Method.genruntimeconfig.cache

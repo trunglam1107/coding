@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+
+
+}
+
+@model Demo02.Models.HocSinh
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <form action="/Demo/Index" method="POST">
+            <div>
+                <label>Mã HS : </label>
+                <input type="text" name="txtMaHS" />
+            </div>
+            <div>
+                <label>Họ Tên : </label>
+                <input type="text" name="txtHoTen" />
+            </div>
+            <div>
+                <input type="submit" value="submit" />
+            </div>
+        </form>
+        @if (Model != null)
+        {
+            <h2>Thông tin học sinh</h2>
+            <h3>Mã hs : @Model.MaHS</h3>
+            <h3>Tên hs : @Model.TenHS</h3>
+        }
+
+    </div>
+</body>
+</html>
