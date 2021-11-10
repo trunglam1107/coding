@@ -1,0 +1,16 @@
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\obj\Debug\net5.0\DemSoKiTu.csproj.AssemblyReference.cache
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\obj\Debug\net5.0\DemSoKiTu.GeneratedMSBuildEditorConfig.editorconfig
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\obj\Debug\net5.0\DemSoKiTu.AssemblyInfoInputs.cache
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\obj\Debug\net5.0\DemSoKiTu.AssemblyInfo.cs
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\obj\Debug\net5.0\DemSoKiTu.csproj.CoreCompileInputs.cache
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\bin\Debug\net5.0\DemSoKiTu.exe
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\bin\Debug\net5.0\DemSoKiTu.deps.json
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\bin\Debug\net5.0\DemSoKiTu.runtimeconfig.json
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\bin\Debug\net5.0\DemSoKiTu.runtimeconfig.dev.json
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\bin\Debug\net5.0\DemSoKiTu.dll
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\bin\Debug\net5.0\ref\DemSoKiTu.dll
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\bin\Debug\net5.0\DemSoKiTu.pdb
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\obj\Debug\net5.0\DemSoKiTu.dll
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\obj\Debug\net5.0\ref\DemSoKiTu.dll
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\obj\Debug\net5.0\DemSoKiTu.pdb
+G:\coding\Study\ASP.NETCORE\DemSoKiTu\obj\Debug\net5.0\DemSoKiTu.genruntimeconfig.cache

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://wmdemo.cafe24.com/wmdemo1.php -->
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Wise Mentor TEST1</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<meta name="author" content="Dikay Kim">
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<meta property="og:url" content="">
+	<meta property="og:type" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+
+	<script src="./Wise Mentor TEST1_files/jquery.min.js.tải xuống"></script>
+	<script src="./Wise Mentor TEST1_files/wm_process.js.tải xuống"></script>
+
+	<!-- font -->
+	<link href="./Wise Mentor TEST1_files/css2" rel="stylesheet">
+	<link href="./Wise Mentor TEST1_files/css2(1)" rel="stylesheet">
+	<link href="./Wise Mentor TEST1_files/css2(2)" rel="stylesheet">
+	<link href="./Wise Mentor TEST1_files/css2(3)" rel="stylesheet">
+
+
+	<style>
+		body,
+		input,
+		button {
+			font-family: 'Merriweather', serif;
+			font-size: 16px;
+		}
+
+		.coupon,
+		.mylist {
+			text-align: center;
+		}
+
+		.coupon h4,
+		.mylist h4 {
+			font-size: 48px;
+			margin-bottom: 10px;
+		}
+
+		.input_style input {
+			display: block;
+			width: 300px;
+			height: 34px;
+			padding: 6px 12px;
+			margin: 20px auto;
+			font-size: 18px;
+			line-height: 1.42857143;
+			color: #555;
+			text-align: center;
+			background-color: #fff;
+			background-image: none;
+			border: 1px solid #ccc;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+			-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+			-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+			transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		}
+
+		.input_style:focus input {
+			border-color: #66afe9;
+			outline: 0;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+		}
+
+
+
+		button {
+			display: inline-block;
+			padding: 6px 12px;
+			margin: 5px;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 1.42857143;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			-ms-touch-action: manipulation;
+			touch-action: manipulation;
+			cursor: pointer;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			background-image: none;
+			border: 1px solid transparent;
+			border-radius: 4px;
+		}
+
+
+		.wmtable {
+			width: 800px;
+			max-width: 100%;
+			margin-bottom: 20px;
+			margin: 0 auto;
+			vertical-align: middle;
+		}
+
+
+		.wmtable>tbody>tr>td,
+		.wmtable>tbody>tr>th,
+		.wmtable>tfoot>tr>td,
+		.wmtable>tfoot>tr>th,
+		.wmtable>thead>tr>td,
+		.wmtable>thead>tr>th {
+			padding: 8px;
+			line-height: 1.42857143;
+			vertical-align: top;
+			border-top: 1px solid #ddd;
+			vertical-align: middle;
+		}
+
+		.wmtable>thead>tr>th {
+			vertical-align: bottom;
+			border-bottom: 2px solid #ddd;
+			vertical-align: middle;
+		}
+
+		.wmtable>caption+thead>tr:first-child>td,
+		.wmtable>caption+thead>tr:first-child>th,
+		.wmtable>colgroup+thead>tr:first-child>td,
+		.wmtable>colgroup+thead>tr:first-child>th,
+		.wmtable>thead:first-child>tr:first-child>td,
+		.wmtable>thead:first-child>tr:first-child>th {
+			border-top: 0;
+		}
+
+		.wmtable>tbody+tbody {
+			border-top: 2px solid #ddd;
+		}
+
+		.wmtable .wmtable {
+			background-color: #fff;
+		}
+	</style>
+
+</head>
+
+
+<body>
+
+	<div class="coupon">
+		<h4>Check Coupon</h4>
+		<div id="chkCoupon">
+			<div id="message" class="res_msg">After verifying the validity of the coupon code below, you can proceed
+				with the Wise Mentor TEST</div>
+			<div class="input_style"><input id="coupon_no" name="coupon_no" type="text" maxlength="12"
+					onkeypress="onlyNumber();"></div>
+			<div class=""><button type="button" id="coupon_btn">Check Coupon</button></div>
+		</div>
+	</div>
+
+	<hr style="margin-top:50px">
+
+	<div class="mylist">
+		<h4>My test list</h4>
+		<div id="testList">
+			<table class="wmtable">
+				<thead>
+					<tr class="bg-color-dark text-white text-4">
+						<th>No.</th>
+						<th>Test Title</th>
+						<th>Test Description</th>
+						<th>Expiry Date</th>
+						<th>Launch</th>
+					</tr>
+					<tr></tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>17</td>
+						<td>Bài kiểm tra chọn ngành học</td>
+						<td>Giúp học sinh dễ dàng chọn lựa ngành học yêu thích và phù hợp vơi năng khiếu.</td>
+						<td>(610514945107)<br><span style="color:#333333">31/10/2021</span></td>
+						<td><a
+								href="https://www.wisementor.vn/btest/vn/test01/index.php?b25vPTQzMiZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="><button
+									type="button">Start TEST</button></a></td>
+					</tr>
+					<tr>
+						<td>16</td>
+						<td>Bài kiểm tra chọn ngành học</td>
+						<td>Giúp học sinh dễ dàng chọn lựa ngành học yêu thích và phù hợp vơi năng khiếu.</td>
+						<td>(016586033201)<br><span style="color:#333333">31/10/2021</span></td>
+						<td><a
+								href="https://www.wisementor.vn/btest/vn/test01/index.php?b25vPTQzMSZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="><button
+									type="button">Start TEST</button></a></td>
+					</tr>
+					<tr>
+						<td>15</td>
+						<td>Bài kiểm tra chọn ngành học</td>
+						<td>Giúp học sinh dễ dàng chọn lựa ngành học yêu thích và phù hợp vơi năng khiếu.</td>
+						<td>(279126942569)<br><span style="color:#333333">31/10/2021</span></td>
+						<td><a
+								href="https://www.wisementor.vn/btest/vn/test01/index.php?b25vPTQzMCZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="><button
+									type="button">Start TEST</button></a></td>
+					</tr>
+					<tr>
+						<td>14</td>
+						<td>Bài kiểm tra chọn ngành học</td>
+						<td>Giúp học sinh dễ dàng chọn lựa ngành học yêu thích và phù hợp vơi năng khiếu.</td>
+						<td>(763277058579)<br><span style="color:#333333">31/10/2021</span></td>
+						<td><a
+								href="https://www.wisementor.vn/btest/vn/test01/index.php?b25vPTQyMyZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="><button
+									type="button">Start TEST</button></a></td>
+					</tr>
+					<tr>
+						<td>13</td>
+						<td>Bài kiểm tra chọn ngành học</td>
+						<td>Giúp học sinh dễ dàng chọn lựa ngành học yêu thích và phù hợp vơi năng khiếu.</td>
+						<td>(318201460851)<br><span style="color:#333333">31/10/2021</span></td>
+						<td><a
+								href="https://www.wisementor.vn/btest/vn/test01/index.php?b25vPTQxOSZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="><button
+									type="button">Start TEST</button></a></td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td>Bài kiểm tra chọn ngành học</td>
+						<td>Giúp học sinh dễ dàng chọn lựa ngành học yêu thích và phù hợp vơi năng khiếu.</td>
+						<td>(428744523340)<br><span style="color:#333333">31/10/2021</span></td>
+						<td><a
+								href="https://www.wisementor.vn/btest/vn/test01/index.php?b25vPTQwNyZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="><button
+									type="button">Start TEST</button></a></td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td>Bài kiểm tra chọn ngành học</td>
+						<td>Giúp học sinh dễ dàng chọn lựa ngành học yêu thích và phù hợp vơi năng khiếu.</td>
+						<td>(663205419967)<br><span style="color:#333333">31/10/2021</span></td>
+						<td><a
+								href="https://www.wisementor.vn/btest/vn/test01/index.php?b25vPTQwNCZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="><button
+									type="button">Start TEST</button></a></td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>Bài kiểm tra thói quen và phương pháp học tập</td>
+						<td>Bài kiểm tra phân tích phương pháp học tập của học sinh và xác định các hạn chế cần cải
+							thiện.</td>
+						<td>(457574970543)<br><span style="color:#333333">30/09/2021</span></td>
+						<td><a
+								href="https://www.wisementor.vn/btest/vn/test02/index.php?b25vPTM1MSZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="><button
+									type="button">Start TEST</button></a></td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>Bài kiểm tra chọn ngành học</td>
+						<td>Giúp học sinh dễ dàng chọn lựa ngành học yêu thích và phù hợp vơi năng khiếu.</td>
+						<td>(678935661835)<br><span style="color:#333333">13/09/2021</span></td>
+						<td><a href="https://www.wisementor.vn/account/myresult_partner.php?b25vPTI0MyZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="
+								class="btn btn-primary rounded-0"><button type="button">View Result</button></a></td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>Bài kiểm tra thói quen và phương pháp học tập</td>
+						<td>Bài kiểm tra phân tích phương pháp học tập của học sinh và xác định các hạn chế cần cải
+							thiện.</td>
+						<td>(824193040771)<br><span style="color:#333333">30/09/2021</span></td>
+						<td><a href="https://www.wisementor.vn/account/myresult_partner.php?b25vPTI0MiZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="
+								class="btn btn-primary rounded-0"><button type="button">View Result</button></a></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>Bài kiểm tra năng khiếu khám phá ngành nghề</td>
+						<td>Giúp người làm kiểm tra lựa chọn được lĩnh vực công việc và công việc phù hợp nhất với bản
+							thân.</td>
+						<td>(371879020049)<br><span style="color:#333333">30/09/2021</span></td>
+						<td><a href="https://www.wisementor.vn/account/myresult_partner.php?b25vPTI0MCZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="
+								class="btn btn-primary rounded-0"><button type="button">View Result</button></a></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>Bài kiểm tra khám phá nghề nghiệp dành cho trẻ em</td>
+						<td>Bài kiểm tra nhằm khám phá công việc mà sinh viên yêu thích và phù hợp với năng khiếu.</td>
+						<td>(643302271485)<br><span style="color:#333333">30/09/2021</span></td>
+						<td><a href="https://www.wisementor.vn/account/myresult_partner.php?b25vPTIzOSZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="
+								class="btn btn-primary rounded-0"><button type="button">View Result</button></a></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Bài kiểm tra khám phá nghề nghiệp dành cho trẻ em</td>
+						<td>Bài kiểm tra nhằm khám phá công việc mà sinh viên yêu thích và phù hợp với năng khiếu.</td>
+						<td>(259317246118)<br><span style="color:#333333">30/09/2021</span></td>
+						<td><a
+								href="https://www.wisementor.vn/btest/vn/test04/index.php?b25vPTIzOCZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="><button
+									type="button">Start TEST</button></a></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Bài kiểm tra khám phá nghề nghiệp dành cho trẻ em</td>
+						<td>Bài kiểm tra nhằm khám phá công việc mà sinh viên yêu thích và phù hợp với năng khiếu.</td>
+						<td>(790807387983)<br><span style="color:#333333">30/09/2021</span></td>
+						<td><a href="https://www.wisementor.vn/account/myresult_partner.php?b25vPTIzNCZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="
+								class="btn btn-primary rounded-0"><button type="button">View Result</button></a></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Bài kiểm tra năng khiếu khám phá ngành nghề</td>
+						<td>Giúp người làm kiểm tra lựa chọn được lĩnh vực công việc và công việc phù hợp nhất với bản
+							thân.</td>
+						<td>(729279330541)<br><span style="color:#333333">30/09/2021</span></td>
+						<td><a href="https://www.wisementor.vn/account/myresult_partner.php?b25vPTIzMyZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="
+								class="btn btn-primary rounded-0"><button type="button">View Result</button></a></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Bài kiểm tra thói quen và phương pháp học tập</td>
+						<td>Bài kiểm tra phân tích phương pháp học tập của học sinh và xác định các hạn chế cần cải
+							thiện.</td>
+						<td>(735814974427)<br><span style="color:#333333">30/09/2021</span></td>
+						<td><a
+								href="https://www.wisementor.vn/btest/vn/test02/index.php?b25vPTIzMiZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="><button
+									type="button">Start TEST</button></a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Bài kiểm tra thói quen và phương pháp học tập</td>
+						<td>Bài kiểm tra phân tích phương pháp học tập của học sinh và xác định các hạn chế cần cải
+							thiện.</td>
+						<td>(823587483194)<br><span style="color:#333333">30/09/2021</span></td>
+						<td><a href="https://www.wisementor.vn/account/myresult_partner.php?b25vPTIzMSZsYW49dm4mcmVfdXJsPWh0dHA6Ly93bWRlbW8uY2FmZTI0LmNvbS93bWRlbW8xLnBocA=="
+								class="btn btn-primary rounded-0"><button type="button">View Result</button></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>

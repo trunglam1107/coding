@@ -1,0 +1,487 @@
+	function scriptQuery() {
+		var script = document.getElementsByTagName('script');   
+		script = script[script.length-1].src  
+		.replace(/^[^\?]+\?/, '')           
+		.replace(/#.+$/, '')                      
+		.split('&');                                   
+		
+		var queries = {}                             
+		, query;
+     
+		while(script.length){                      
+			query = script.shift().split('=');    
+			queries[query[0]] = query[1];   
+		}
+     
+		return queries;
+
+	}
+
+		var params = scriptQuery();
+
+		var pcode = params.pcode;
+		var tlan = params.tlan;
+		var email = params.email;
+		var name = params.name;
+		var dob = params.dob;
+		var region = params.region;
+		var gender = params.gender;
+		var school = params.school;
+		var grade = params.grade;
+		var re_url = params.re_url;
+		//Test List
+		var url = "https://www.wisementor.vn/"
+
+
+
+$(document).ready(function(){  
+
+	var inputCoupon = '<div class="input_style"><input id="coupon_no" name="coupon_no" type="text" maxlength="12" onkeypress="onlyNumber();"></div>';
+	var button = '<div class=""><button type="button" id="coupon_btn">Check Coupon</button></div>';
+	var message = '<div id="message" class="res_msg">After verifying the validity of the coupon code below, you can proceed with the Wise Mentor TEST</div>';
+
+	var chkCoupon_contents  = message;
+		chkCoupon_contents += inputCoupon;
+		chkCoupon_contents += button;
+
+
+	$('#chkCoupon').html(chkCoupon_contents);
+
+	
+
+	function wm_list(){
+
+		var path = "api/wm_testlist.php";
+
+		$.ajax({
+			url: url + path,
+			dataType: 'jsonp',
+			data:{email:email, re_url:re_url, pcode:pcode},
+			success: function (res) {
+
+
+				var no = res.length;
+				var content = '';
+
+				if(no == 0) {
+
+					content ='<h4 class="text-center text-muted">There are no registered tests</h4>';
+
+				} else {
+
+
+					content += '<table class="wmtable">';
+					content += '<thead>';
+					content += '<tr class="bg-color-dark text-white text-4">';
+					content += '<th>No.</th>';
+					content += '<th>Test Title</th>';
+					content += '<th>Test Description</th>';
+					content += '<th>Expiry Date</th>';
+					content += '<th>Launch</th>';
+					content += '<tr>';
+					content += '</thead>';
+
+					content += '<tbody>';
+
+
+					for(var x = 0; x < res.length; x++) {
+
+						if(res[x].day < 7) {
+
+//							var day_style = 'text-secondary';
+							var day_style = 'style="color:#ee6259"';
+
+						} else {
+
+//							var day_style = 'text-success';
+							var day_style = 'style="color:#333333"';
+
+						}
+
+
+						content += '<tr>';
+						content += '<td>' + no + "</td>";
+						content += '<td>' + res[x].pno + '</td>';
+						content += '<td>' + res[x].desc_vn + '</td>';
+//						content += '<td>(' + res[x].cno + ')<Br><span class="' + day_style + '">' + res[x].coupon_edate + '</span></td>';
+						content += '<td>(' + res[x].cno + ')<Br><span ' + day_style + '>' + res[x].coupon_edate + '</span></td>';
+
+						var value = btoa('ono='+res[x].ono+'&lan='+res[x].tlan+'&re_url='+re_url);
+
+						if(res[x].status == 1) {
+
+						content += '<td><a href="' + url + 'account/myresult_partner.php?' + value + '" class="btn btn-primary rounded-0"><button type="button">View Result</button></a></td>';
+
+						} else {
+
+
+							if(res[x].day < 7) {
+
+								content += '<td><span style="color:#ee6259">Expired</span></td>';
+
+							} else {
+
+								content += '<td><a href="' + url + 'btest/' + res[x].tlan + '/' + res[x].tlink + '?' + value + '"><button type="button">Start TEST</button></a></td>';
+
+							}
+
+						
+						}
+
+						content += '</tr>';
+						
+						no = no - 1;
+
+					}
+
+				}
+
+				content += '</tbody>';
+				content += '</table>';
+
+				$('#testList').html(content);
+
+
+			}, 
+			error: function(xhr) {
+
+				alert("Error !!");
+
+			}
+
+		});
+
+	}
+
+
+	//Update Coupon
+	$(document).on('click', '#btnRegiste', function(){  
+
+		var coupon_no = $('#coupon_no').val();
+
+		if(coupon_no == '') {
+
+			alert('Insert a coupon no.');
+			$('#testBtn').html('');
+			return false;
+
+		}
+
+
+		$.ajax({  
+            url:url + "api/update.php",  
+            method:"POST",  
+            data:{pcode:pcode, tlan:tlan, cno:coupon_no, email:email, name:name, dob:dob, region:region, gender:gender, school:school, grade:grade},
+            dataType:"text",  
+            complete:function(data){  
+
+				wm_list();
+				$('#chkCoupon').html(inputCoupon + button);
+				$('#coupon_no').attr('disabled', false).val('');
+
+            }  
+        }); 
+
+
+	}); 
+
+
+	wm_list();
+
+
+	//Reset
+	$(document).on('click', '#btnReset', function(){  
+
+	$('#chkCoupon').html(chkCoupon_contents);
+	$('#coupon_no').attr('disabled', false).val('').focus();
+
+
+	$(function() {
+		$("#coupon_no").on("keydown", function(event) {
+			if (event.keyCode == 13) {
+				$("#coupon_btn").click();
+				return false;
+
+			}
+		});
+	});
+
+
+	});
+
+
+/**** Check Coupon ******/
+
+	$(function() {
+		$("#coupon_no").on("keydown", function(event) {
+			if (event.keyCode == 13) {
+				$("#coupon_btn").click();
+				return false;
+
+			}
+		});
+	});
+
+
+	$(document).on('click', '#coupon_btn', function(){  
+
+		var path = "api/wm_chkcoupon.php";
+		var coupon_no = $('#coupon_no').val();
+		var pcode = params.pcode;
+
+		
+
+		if(coupon_no == '') {
+
+			alert('Insert a coupon no');
+			$("#coupon_no").val('').focus();
+			return false;
+
+		}
+
+		$.ajax({
+				url: url + path,
+				dataType: 'jsonp',
+				data:{cno:coupon_no, pcode:pcode},
+				success: function (data) {
+
+
+					var res_msg = data.result_msg;
+					var res_code = data.result_code;
+					var test_type = data.test_type;
+					var test_code = data.test_code;
+
+
+					
+
+					if(res_code == 'available') {
+
+						button_reg  = '<button type="button" class="btn btn-success rounded-0" id="btnRegiste">Registe Coupon</button>';
+						button_reg += '<button type="button" class="btn btn-danger rounded-0" id="btnReset">Reset</button>';
+
+						$('#chkCoupon').html(message + inputCoupon + button_reg);
+						$('#coupon_no').attr('disabled', true).val(coupon_no);
+
+					} else {
+
+						$('#chkCoupon').html(chkCoupon_contents);
+						$('#coupon_no').val('').focus();
+
+					}
+
+
+					$(function() {
+						$("#coupon_no").on("keydown", function(event) {
+							if (event.keyCode == 13) {
+								$("#coupon_btn").click();
+								return false;
+
+							}
+						});
+					});
+
+
+					$('#message').text(res_msg + " (Test Title: " + test_type + ")");
+
+				}, 
+				error: function(xhr) {
+
+					alert("Error !!");
+
+				}
+
+		});
+
+	}); 
+
+
+
+});
+
+
+
+
+/*** Parents TEST *****/
+
+
+	$(document).on('click', '#reg_btn', function(){  
+
+		var pname = $('#pname').val();
+		var pemail = $('#pemail').val();
+		var pregion = $('[id=pregion] > option:selected').val();
+
+		var pcode = params.pcode;
+		var tlan = params.tlan;
+		var re_url = params.re_url;
+
+
+		$.ajax({  
+            url:url + "api/update_ptest.php",  
+            method:"POST",  
+            data:{pname:pname, pemail:pemail, pregion:pregion, tlan:tlan, pcode:pcode},
+            dataType:"text",  
+            complete:function(data){  
+
+            }  
+        }); 
+
+	});
+
+
+	$(document).on('click', '#start_test', function(){  
+
+		var pname = $('#pname').val();
+		var pemail = $('#pemail').val();
+		var pcontact = $('#pcontact').val();
+		var pregion = $('[id=pregion] > option:selected').val();
+		var child1 = $('[id=child1] > option:selected').val();
+		var child2 = $('[id=child2] > option:selected').val();
+		var child3 = $('[id=child3] > option:selected').val();
+
+		var pcode = params.pcode;
+		var tlan = params.tlan;
+		var re_url = params.re_url;
+
+		$.ajax({  
+            url:url + "api/update_ptest.php",  
+//            method:"POST",  
+            data:{pname:pname, pemail:pemail, pcontact:pcontact, pregion:pregion, child1:child1, child2:child2, child3:child3, tlan:tlan, pcode:pcode},
+//            dataType:"text",  
+			dataType: 'jsonp',
+            success:function(data){
+
+
+				var value = btoa('ono='+data.ono+'&lan='+tlan+'&re_url='+re_url);
+
+				window.location.href=url + "btest/" + tlan + "/test05/index.php?" + value;
+
+            }  
+        }); 
+
+	});
+
+
+	$(document).on('click', '#reset', function(){  
+
+		$('#chk_btn').html('<button type="button" id="check_btn" class="btn btn-primary rounded-0 w-100 float-end mt-3">Check Data</button>');
+		$('#reg_btn').html('');
+
+		$('input#pname').attr('readonly', false);
+		$('input#pemail').attr('readonly', false);
+		$('select#pregion').attr('disabled', false);
+
+		$('#result_msg').text('');
+
+	});
+
+
+
+
+	$(document).on('click', '#check_btn', function(){  
+
+	//	var url = "https://www.wisementor.vn/"
+//		var path = "api/wm_chkcoupon.php";
+
+		var pname = $('#pname').val();
+		var pemail = $('#pemail').val();
+		var pcontact = $('#pcontact').val();
+		var pregion = $('[id=pregion] > option:selected').val();
+		var child1 = $('[id=child1] > option:selected').val();
+		var child2 = $('[id=child2] > option:selected').val();
+		var child3 = $('[id=child3] > option:selected').val();
+
+		var pcode = params.pcode;
+		var tlan = params.tlan;
+		var re_url = params.re_url;
+
+		if(pname == '') {
+
+			alert('Insert a name');
+			$("#pname").val('').focus();
+			return false;
+
+		}
+
+		if(pemail == '') {
+
+			alert('Insert a email');
+			$("#pemail").val('').focus();
+			return false;
+
+		}
+
+		if(pcontact == '') {
+
+			alert('Insert a phone no');
+			$("#pcontact").val('').focus();
+			return false;
+
+		}
+
+		if(pregion == '') {
+
+			alert('Insert a region');
+//			$("#pname").val('').focus();
+			return false;
+
+		}
+
+
+		if(child1 == '') {
+
+			alert('Choose your childs grade level');
+//			$("#pname").val('').focus();
+			return false;
+
+		}
+
+
+		$.ajax({
+				url: url + "api/wm_ptest.php",
+				dataType: 'jsonp',
+				data:{pname:pname, pemail:pemail, pregion:pregion, tlan:tlan, pcode:pcode},
+				success: function (data) {
+
+					var res_msg = data.result_msg;
+					var status_code = data.status_code;
+
+					$('#result_msg').text(res_msg);
+
+					if(status_code == 'success') {
+
+//						$('input#pname').val('asdfasdfasdf');
+						$('input#pname').attr('disabled', true);
+						$('input#pemail').attr('disabled', true);
+						$('input#pcontact').attr('disabled', true);
+						$('select#pregion').attr('disabled', true);
+
+						$('select#child1').attr('disabled', true);
+						$('select#child2').attr('disabled', true);
+						$('select#child3').attr('disabled', true);
+
+//						$('#infobox').html('');
+
+//						$('#chk_btn').html('');
+//						$('#reg_btn').html('<button type="button" id="start_test" class="btn btn-success rounded-0 mt-3">Start Test</button><button type="button" id="reset" class="btn btn-primary rounded-0 float-end mt-3">Reset</button>');
+
+						
+//						$('#check_btn').innerText = "Reset";
+						document.getElementById('check_btn').innerText = "Start Test";
+						document.getElementById('check_btn').setAttribute("id", "start_test");
+//						$('#check_btn').setAttribute("id", "reset");
+
+					}
+
+
+				}, 
+				error: function(xhr) {
+
+					alert("Error !!");
+
+				}
+
+		});
+
+	}); 
+
+
